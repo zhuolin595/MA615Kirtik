@@ -1,0 +1,20 @@
+---
+title: "MA615kir"
+format: pdf
+editor: visual
+---
+
+## Quarto
+
+```{r}
+data(Indometh)
+```
+
+```{r}
+library(ggplot2)
+ggplot(Indometh, aes(x = time, y = conc, group = Subject, color = factor(Subject))) +
+  geom_line() +
+  geom_point()
+```
+
+#Analysis：This graph illustrates the plasma concentration changes in 6 subjects over 0.25–8 hours post-administration, showing an overall trend of rapid decline followed by gradual stabilization. Curves of different colors represent individual subjects, revealing similar decay patterns with some inter-subject variability.
